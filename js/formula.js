@@ -1,17 +1,29 @@
-var btn = document.querySelector("#botao-calcular");
 
-btn.addEventListener("click", function (event) {
-    event.preventDefault();
+var btnCalcular = document.querySelector("#botao-calcular");
+var btnLimpar = document.querySelector("#botao-limpar");
+var resposta1 = document.querySelector("#x-1")
+var resposta2 = document.querySelector("#x-2")
 
+btnCalcular.addEventListener("click", function (event) {
+    event.preventDefault();     // previne o comportamento padrao do btn de enviar os dados e recarregar a pagina
     var form = document.querySelector("#formulario");
-
     var dados = dadosFormulario(form);
-
     var resultado = delta(dados);
-
     exibeResultado(dados, resultado);
-    
+
+    resposta1.classList.remove("resposta");
+    resposta2.classList.remove("resposta");
 });
+
+
+btnLimpar.addEventListener("click", function () {
+    var form = document.querySelector("#formulario");
+    form.reset();
+    
+    resposta1.classList.add("resposta");
+    resposta2.classList.add("resposta");
+});
+
 
 function dadosFormulario(form) {
     var dados = {
