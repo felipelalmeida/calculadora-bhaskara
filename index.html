@@ -13,17 +13,20 @@
     <div class="container">
         <form id="formulario">
             <label class="texto">Insira os Valores</label>
-            <input type="text" name="a" id="valor-a" class="valor" placeholder="A">
-            <input type="text" name="b" id="valor-b" class="valor" placeholder="B">
-            <input type="text" name="c" id="valor-c" class="valor" placeholder="C">
+            <input type="number" name="a" id="valor-a" class="valor" placeholder="A">
+            <input type="number" name="b" id="valor-b" class="valor" placeholder="B">
+            <input type="number" name="c" id="valor-c" class="valor" placeholder="C">
             <button id="botao-calcular" class="btn">Calcular</button>
         </form>
-        <label class="texto">Respostas:</label>
-        <label class="texto">X'=</label><span id="x-1" class="respostas"></span>
-        <label class="texto">X''=</label><span id="x-2" class="respostas"></span>
+        <ul>
+            <li class="texto">Respostas</li>
+            <li class="texto">X'= </label><span id="x-1"></span></li>
+            <li class="texto">X''= <span id="x-2"></span></li>
+        </ul>
         <button id="botao-limpar" class="btn btn-limpar">Limpar</button>
     </div>
 </body>
 <script src="js/formula.js"></script>
+<script src="js/limpar-form.js"></script>
 
 </html>
