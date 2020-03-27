@@ -3,7 +3,7 @@ function exibeResultado(respostas) {
     let xDLinha = document.querySelector("#x-2");
     xLinha.innerHTML = respostas.xI;
     xDLinha.innerHTML = respostas.xII;
-    resposta1.classList.remove("resposta");
-    resposta2.classList.remove("resposta");
+    respostasX[0].classList.remove("resposta");
+    respostasX[1].classList.remove("resposta");
 
 }
